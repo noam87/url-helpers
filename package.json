@@ -1,0 +1,19 @@
+{
+  "name": "clusterfoo.url-helpers",
+  "version": "1.0.0",
+  "description": "URL string helpers",
+  "main": "url.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CLUSTERfoo/url-helpers.git"
+  },
+  "author": "Noam Gagliardi-Rabinovich <noam@clusterfoo.com> (http://clusterfoo.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CLUSTERfoo/url-helpers/issues"
+  },
+  "homepage": "https://github.com/CLUSTERfoo/url-helpers"
+}

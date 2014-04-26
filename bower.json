@@ -1,0 +1,19 @@
+{
+  "name": "clusterfoo.url-helpers",
+  "version": "1.0.0",
+  "homepage": "https://github.com/CLUSTERfoo/url-helpers",
+  "authors": [
+    "noam <noam@clusterfoo.com>"
+  ],
+  "description": "URL string helpers",
+  "main": "url.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
