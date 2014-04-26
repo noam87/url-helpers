@@ -1,7 +1,5 @@
 ## URL String Helpers for the Browser or Node.js
 
-Some helper functions for handling cookies in the browser.
-
 ## Node Install
 
     npm install git://github.com/clusterfoo/url-helpers
