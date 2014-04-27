@@ -8,7 +8,7 @@
   // Usage:
   //
   // To initialize this  the user may call the `Clusterfoo()` function,
-  // which will make `Clusterfoo.cookies` available globally.
+  // which will make `Clusterfoo.url` available globally.
   if (typeof window.Clusterfoo !== "object") {
     window.Clusterfoo = function() {
       window.Clusterfoo = {};
