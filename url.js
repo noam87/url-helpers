@@ -3,7 +3,7 @@
   if (typeof Clusterfoo === "object") Clusterfoo.url = C;
 
   ////
-  // Namespace your shit, people.
+  // Namespace.
   //
   // Usage:
   //
