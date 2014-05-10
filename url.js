@@ -1,18 +1,22 @@
 ;(function(window, exports) {
   var C = {};
-  if (typeof Clusterfoo === "object") Clusterfoo.url = C;
-
-  ////
-  // Namespace.
-  //
-  // Usage:
-  //
-  // To initialize this  the user may call the `Clusterfoo()` function,
-  // which will make `Clusterfoo.url` available globally.
-  if (typeof window.Clusterfoo !== "object") {
-    window.Clusterfoo = function() {
-      window.Clusterfoo = {};
-      Clusterfoo.url = C;
+    
+  appendToNamespace("Clusterfoo", "url", C);
+  
+  function appendToNamespace(namespace, elementName, elementValue) {
+    if (typeof window[namespace] === "object") {
+      window[namespace][elementName] = elementValue;
+    }
+    var oldNamespaceFunction = function(){};
+    if (typeof window[namespace] == "function") {
+      oldNamespaceFunction = window[namespace];
+    }
+    if (typeof window[namespace] !== "object") {
+      window[namespace] = function() {
+        window[namespace] = {};
+        oldNamespaceFunction();
+        window[namespace][elementName] = elementValue;
+      }
     }
   }
 
