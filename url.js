@@ -62,5 +62,24 @@
     // Does the string end in "/"?
     function endsInSlash(string) { return string.slice(-1) == "/" }
   }
+
+  // Query string helpers
+  exports.queryString = C.queryString = queryString = {};
+
+  ////
+  // Get value of querystring variable
+  queryString.get = getQueryVariable;
+  function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    console.log('Query variable %s not found', variable);
+  }
+
 })(typeof window !== "undefined" ? window : {},
    typeof exports !== "undefined" ? exports : {});
